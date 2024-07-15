@@ -1,3 +1,10 @@
+#参考資料
+#https://daeudaeu.com/tkinter_quiz/
+#https://www.earthlink.co.jp/engineerblog/technology-engineerblog/7744/
+#
+
+
+
 #01_ライブラリインポート
 import random
 import tkinter as tk
