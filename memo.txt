@@ -30,3 +30,16 @@
 〇ランダム作成
 
 
+画像取得
+https://mangakoma.net/manga/wanpisu002
+
+#選択
+/html/body/main/div/div/div[2]/article/div[2]/div/ul/li[1121]/a
+/html/body/main/div/div/div[2]/article/div[2]/div/ul/li[1120]/a
+/html/body/main/div/div/div[2]/article/div[2]/div/ul/li[1119]/a
+
+
+#タイトル画像
+/html/body/main/div/div/div/div[3]/div[1]
+/html/body/main/div/div/div/div[3]/div[1]
+
