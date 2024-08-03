@@ -1,0 +1,8 @@
+FROM selenium/standalone-chrome:126.0
+USER root
+RUN sudo apt -y install python3.10
+RUN export PATH=$PATH:/usr/local/python/bin
+RUN sudo apt update -y 
+RUN sudo apt upgrade -y 
+RUN sudo apt-get -y install python3-pip
+RUN pip install selenium --user
