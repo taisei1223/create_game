@@ -18,7 +18,6 @@ def read_csv():
 def create_num_list():
     num_list=[]
     for num in range(1,num_max+1):
-        print(num)
         num_list.append(num)
         
     return num_list
