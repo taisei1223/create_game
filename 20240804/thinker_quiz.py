@@ -51,9 +51,6 @@ def check():
     else:
         result['text']=f'アルファベットを入力してください'
     result.update()
-    
-
-
 
 
 
