@@ -9,9 +9,8 @@ import random
 #data
 #csvファイルを読み取る関数
 def read_csv():
-    with open(filepath, encoding='utf8', newline='') as f:
-        csvreader = csv.reader(f)
-        content = [row for row in csvreader]   
+    df=pd.read_csv(filepath)
+    content=df.values.tolist()
     return content
 
 #マックス数値まで値をリストに格納し、数字が入ったリストを取り出すという関数
@@ -26,7 +25,7 @@ def create_num_list():
 #=====================================================================================
 
 #csv のファイルパス導入
-filepath="C:/Users/taise/workspace/gamking/onepice_titles.csv"
+filepath="https://raw.githubusercontent.com/taisei1223/create_game/main/onepice.csv"
 
 #csv読み取り関数実行
 content=read_csv()
