@@ -1,16 +1,17 @@
 import random
+import pandas as pd
 
 # クイズの質問と選択肢を定義
-# quiz = [
+# quizs = [
 #     {
 #         "question": "Pythonの開発者は誰ですか？",
 #         "choices": ["Guido van Rossum", "Elon Musk", "Bill Gates", "Mark Zuckerberg"],
 #         "answer": "Guido van Rossum"
 #     },
 #     {
+#         "answer": "3.11",
 #         "question": "Pythonの最新バージョンは何ですか？（2024年現在）",
-#         "choices": ["3.8", "3.9", "3.10", "3.11"],
-#         "answer": "3.11"
+#         "choices": ["3.8", "3.9", "3.10", "3.11"]
 #     },
 #     {
 #         "question": "Pythonのデータ型に含まれないものはどれですか？",
@@ -24,25 +25,39 @@ import random
 #     }
 # ]
 
+#quizs = list 　[] 
+
+
+#quiz = dictonary { キー :　バリュー }
 
 
 
 quizs=[]
 
-quiz_base=['43話はどれ？', 'サンジ登場', 'サンジ登場', '海賊道化のバギー', '4人目', '分相応']
-question=quiz_base[0]
-choices=[quiz_base[2],quiz_base[3],quiz_base[4],quiz_base[5]]
-answer=quiz_base[1]
+# quiz_base=['43話はどれ？', 'サンジ登場', 'サンジ登場', '海賊道化のバギー', '4人目', '分相応']
+# question=quiz_base[0]
+# answer=quiz_base[1]
+# choices=[quiz_base[2],quiz_base[3],quiz_base[4],quiz_base[5]]
 
 
 
-quiz={
-"question":question,
-"choices":choices,
-"answer":answer
-}
+filepath="https://raw.githubusercontent.com/taisei1223/create_game/main/onepice.csv"
 
-quizs.append(quiz)
+def read_csv():
+    df=pd.read_csv(filepath)
+    content=df.values.tolist()
+    return content
+ 
+content=read_csv()
+ 
+for i in range(0,100):
+    quiz_base=content[i]
+    quiz={
+    "question":quiz_base[0],
+    "answer":quiz_base[1],
+    "choices":[quiz_base[2],quiz_base[3],quiz_base[4],quiz_base[5]]
+    }
+    quizs.append(quiz)
 
 # クイズをランダムに選択
 def random_quiz(quiz):
